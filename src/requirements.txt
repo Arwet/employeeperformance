@@ -8,7 +8,7 @@ flask
 os 
 xlrd
 ipykernel
-
 lightgbm
 xgboost
+streamlit
 
