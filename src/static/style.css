@@ -1,0 +1,375 @@
+/* Custom CSS for INX Future Inc Employee Performance Predictor */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Root variables */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --success-color: #4ecdc4;
+    --warning-color: #ff6b6b;
+    --info-color: #45b7d1;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+}
+
+/* Global styles */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Header styling */
+.header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-medium);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Sidebar styling */
+.sidebar-header {
+    background: var(--gradient-accent);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Section headers */
+.section-header {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.section-header h2 {
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.section-header p {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Input sections */
+.input-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+}
+
+.input-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Prediction results */
+.results-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.results-section h2 {
+    color: var(--dark-text);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.prediction-result {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+}
+
+.prediction-result h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.prediction-result p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Recommendations */
+.recommendations-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin-top: 2rem;
+    border-left: 5px solid var(--success-color);
+}
+
+.recommendations-section h3 {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.recommendations-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recommendations-section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f3f4;
+    font-size: 1.05rem;
+}
+
+.recommendations-section li:last-child {
+    border-bottom: none;
+}
+
+/* Insights section */
+.insights-section {
+    margin-top: 2rem;
+}
+
+.insights-section h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.insight-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--info-color);
+}
+
+.insight-card h4 {
+    color: var(--info-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.insight-card p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* About section */
+.about-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    line-height: 1.6;
+}
+
+.about-section h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section h3:first-child {
+    margin-top: 0;
+}
+
+.about-section ul {
+    padding-left: 1.5rem;
+}
+
+.about-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Streamlit component overrides */
+.stSelectbox > div > div {
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease;
+}
+
+.stSelectbox > div > div:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.stSlider > div > div > div {
+    background: var(--gradient-primary);
+}
+
+.stButton > button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.stButton > button:hover {
+    background: var(--gradient-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Sidebar styling */
+.css-1d391kg {
+    background: var(--light-bg);
+}
+
+.css-1lcbmhc {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Hide Streamlit branding */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prediction-result {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .input-section {
+        padding: 1rem;
+    }
+    
+    .prediction-result {
+        padding: 1.5rem;
+    }
+    
+    .about-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Loading spinner */
+.stSpinner > div {
+    border-top-color: var(--primary-color) !important;
+}
+
+/* Success/Error messages */
+.stSuccess {
+    background-color: rgba(78, 205, 196, 0.1);
+    border-left: 5px solid var(--success-color);
+}
+
+.stError {
+    background-color: rgba(255, 107, 107, 0.1);
+    border-left: 5px solid var(--warning-color);
+}
+
+.stInfo {
+    background-color: rgba(69, 183, 209, 0.1);
+    border-left: 5px solid var(--info-color);
+}

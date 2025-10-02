@@ -1,0 +1,14 @@
+pandas 
+joblib 
+matplotlib
+numpy
+seaborn
+scikit-learn
+flask
+os 
+xlrd
+ipykernel
+
+lightgbm
+xgboost
+

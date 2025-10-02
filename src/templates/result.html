@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employee Performance Rating – Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    
+        <div class="result">
+        Predicted Performance Rating: 
+        <strong>{{ rating }}</strong> 
+        </div>
+
+        {% if proba_dict %}
+        <div class="info-box">
+          <h2>Prediction Probabilities</h2>
+          <ul>
+            {% for label, prob in proba_dict.items() %}
+              <li><strong>{{ label }}:</strong> {{ "%.2f"|format(prob * 100) }}%</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="info-box">
+          <h2>Rating Information</h2>
+          <ul>
+            <li><strong>Good:</strong> Employee meets expectations consistently with reliable performance.</li>
+            <li><strong>Excellent:</strong> Employee often exceeds expectations and demonstrates high capability.</li>
+            <li><strong>Outstanding:</strong> Employee consistently exceeds expectations, delivers exceptional results, and shows leadership potential.</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h2>Top 3 Key Factors Influencing This Prediction:</h2>
+          <ul>
+            <li><strong>Environment Satisfaction: </strong> Strong Positive </li>
+            <li><strong>Years Since Last Promotion: </strong> Negative</li>
+            <li><strong>Last Salary Hike (%): </strong> Positive </li>
+          </ul>
+        </div>
+
+        <div class="result back-btn-box">
+        <a href="{{ url_for('home') }}" class="btn">Back to Form</a>
+        </div>
+
+  </div>
+</body>
+</html>

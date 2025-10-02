@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Performance Rating Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Performance Prediction</h1>
+        <p>Fill in the details below to predict an employee’s performance rating. All fields are required.</p>
+        <form method="POST" action="/predict">
+            <label for="EmpEnvironmentSatisfaction">Environment Satisfaction</label>
+            <select name="EmpEnvironmentSatisfaction" required>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+                <option value="4">Very High</option>
+            </select>
+
+            <label for="YearsSinceLastPromotion">Years Since Last Promotion</label>
+            <input type="number" step="any" name="YearsSinceLastPromotion" min="0" max="80" required>
+
+            <label for="EmpLastSalaryHikePercent">Last Salary Hike (%)</label>
+            <input type="number" step="any" name="EmpLastSalaryHikePercent" min="0" max="100" required>
+
+            <label for="EmpDepartment">Department</label>
+            <select name="EmpDepartment" required>
+                <option value="0">Data Science</option>
+                <option value="1">Development</option>
+                <option value="2">Finance</option>
+                <option value="3">Human Resources</option>
+                <option value="4">Research & Development</option>
+                <option value="5">Sales</option>
+            </select>
+
+            <label for="ExperienceYearsInCurrentRole">Experience in Current Role (Years)</label>
+            <input type="number" step="any" name="ExperienceYearsInCurrentRole" min="0" max="80" required>
+
+            <label for="EmpJobRole">Job Role</label>
+            <select name="EmpJobRole" required>
+                <option value="0">Business Analyst</option>
+                <option value="1">Data Scientist</option>
+                <option value="2">Delivery Manager</option>
+                <option value="3">Developer</option>
+                <option value="4">Finance Manager</option>
+                <option value="5">Healthcare Representative</option>
+                <option value="6">Human Resources</option>
+                <option value="7">Laboratory Technician</option>
+                <option value="8">Manager</option>
+                <option value="9">Manager R&D</option>
+                <option value="10">Manufacturing Director</option>
+                <option value="11">Research Director</option>
+                <option value="12">Research Scientist</option>
+                <option value="13">Sales Executive</option>
+                <option value="14">Sales Representative</option>
+                <option value="15">Senior Developer</option>
+                <option value="16">Senior Manager R&D</option>
+                <option value="17">Technical Architect</option>
+                <option value="18">Technical Lead</option>
+            </select>
+
+            <label for="YearsWithCurrManager">Experience with Current Manager (Years)</label>
+            <input type="number" step="any" name="YearsWithCurrManager" min="0" max="80" required>
+
+            <label for="ExperienceYearsAtThisCompany">Experience at Company (Years)</label>
+            <input type="number" step="any" name="ExperienceYearsAtThisCompany" min="0" max="80" required>
+
+            <label for="EmpWorkLifeBalance">Work-Life Balance</label>
+            <select name="EmpWorkLifeBalance" required>
+                <option value="0">Bad</option>
+                <option value="1">Good</option>
+                <option value="2">Better</option>
+                <option value="3">Best</option>
+            </select>
+
+            <label for="Age">Age</label>
+            <input type="number" step="any" name="Age" min="18" max="100" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div class="model-info">
+            <h2>About the Model</h2>
+            <p>
+                This prediction tool is powered by a <strong>Machine Learning model</strong> trained on employee 
+                performance data. The model uses factors such as environment satisfaction, salary hikes, 
+                department, work-life balance, and experience to predict the likely performance rating.
+            </p>
+            <p>
+                The model was evaluated using <strong> XGBoost, Random Forest, and LightGBM</strong>, with the best 
+                performing algorithm selected (XGBoost) after hyperparameter tuning. Metrics such as <em>Accuracy</em> and 
+                <em>F1-score</em> were used to validate performance.
+            </p>
+            <p>
+                Predictions fall into one of the following categories:
+                <ul>
+                    <li><strong>Good</strong> – Meets expectations consistently.</li>
+                    <li><strong>Excellent</strong> – Often exceeds expectations.</li>
+                    <li><strong>Outstanding</strong> – Consistently exceeds expectations with exceptional results.</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Disclaimer:</strong> <em>Kindly note that this tool is for analysis, not official HR decision-making. Predictions are based on historical data trends and should not replace professional performance evaluations.</em>
+            </p>            
+        </div>
+
+
+    </div>
+</body>
+</html>
